@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import MyApp from './MyApp';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <MyApp name="piyopiyo" />
   </React.StrictMode>,
   document.getElementById('root')
 );
