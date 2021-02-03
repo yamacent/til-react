@@ -5,11 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import MyApp from './MyApp';
+import MyStatefullComponent from './MyStatefullComponent';
+import AnotherStatefullComponent from './AnotherStatefullComponent';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <MyApp name="piyopiyo" />
+    <MyStatefullComponent />
+    <AnotherStatefullComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
