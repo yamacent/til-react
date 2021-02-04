@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import MyApp from './MyApp';
 import MyStatefullComponent from './MyStatefullComponent';
 import AnotherStatefullComponent from './AnotherStatefullComponent';
+import MyInput from './MyInput';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
     <MyApp name="piyopiyo" />
     <MyStatefullComponent />
     <AnotherStatefullComponent />
+    <MyInput />
   </React.StrictMode>,
   document.getElementById('root')
 );
