@@ -8,6 +8,7 @@ import MyApp from './MyApp';
 import MyStatefullComponent from './MyStatefullComponent';
 import AnotherStatefullComponent from './AnotherStatefullComponent';
 import MyInput from './MyInput';
+import FilterList from './FilterList';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
     <MyStatefullComponent />
     <AnotherStatefullComponent />
     <MyInput />
+    <FilterList />
   </React.StrictMode>,
   document.getElementById('root')
 );
