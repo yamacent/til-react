@@ -9,6 +9,7 @@ import MyStatefullComponent from './MyStatefullComponent';
 import AnotherStatefullComponent from './AnotherStatefullComponent';
 import MyInput from './MyInput';
 import FilterList from './FilterList';
+import Hook from './Hook';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
     <AnotherStatefullComponent />
     <MyInput />
     <FilterList />
+    <Hook />
   </React.StrictMode>,
   document.getElementById('root')
 );
