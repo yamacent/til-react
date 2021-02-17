@@ -4,22 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import MyApp from './MyApp';
-import MyStatefullComponent from './MyStatefullComponent';
-import AnotherStatefullComponent from './AnotherStatefullComponent';
-import MyInput from './MyInput';
-import FilterList from './FilterList';
-import Hook from './Hook';
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <MyApp name="piyopiyo" />
-    <MyStatefullComponent />
-    <AnotherStatefullComponent />
-    <MyInput />
-    <FilterList />
-    <Hook />
   </React.StrictMode>,
   document.getElementById('root')
 );
