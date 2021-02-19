@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import sentences from './data/sentences';
 import Sentence from './Sentence';
+import './App.css';
 
 export default function App() {
   const [index, setIndex] = useState(0)
   const sentence = sentences[index]
 
   return (
-    <div>
+    <div className="App">
       {index < sentences.length ? (
         <>
           <Sentence en={sentence.en} ja={sentence.ja} />
