@@ -12,12 +12,12 @@ export default function App() {
       {index < sentences.length ? (
         <>
           <Sentence en={sentence.en} ja={sentence.ja} />
-          <button onClick={() => setIndex(index + 1)}>Next</button>
+          <button className="btn btn-primary" onClick={() => setIndex(index + 1)}>Next</button>
         </>
       ) : (
         <>
           <p>Done!</p>
-          <button onClick={() => setIndex(0)}>Retry</button>
+          <button className="btn btn-primary" onClick={() => setIndex(0)}>Retry</button>
         </>
       )}
     </div>

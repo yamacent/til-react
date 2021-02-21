@@ -12,7 +12,7 @@ export default function Sentence(props: SentenceProps) {
     <div className="Sentence">
       <p className="sentence">{props.en}</p>
       <div className="ja">
-        <button onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</button>
+        <button className="btn btn-secondary" onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'} Japanese</button>
         {show && <p className="sentence">{props.ja}</p>}
       </div>
     </div>
