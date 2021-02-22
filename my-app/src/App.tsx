@@ -16,7 +16,7 @@ export default function App() {
         </>
       ) : (
         <>
-          <p>Done!</p>
+          <div className="alert alert-info">Done!</div>
           <button className="btn btn-primary" onClick={() => setIndex(0)}>Retry</button>
         </>
       )}
