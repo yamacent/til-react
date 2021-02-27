@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import sentences from './data/sentences';
 import Sentence from './Sentence';
 
@@ -16,7 +17,7 @@ export default function Play() {
       ) : (
         <>
           <div className="alert alert-info">Done!</div>
-          <button className="btn btn-primary" onClick={() => setIndex(0)}>Retry</button>
+          <Link to="/" className="btn btn-primary" onClick={() => setIndex(0)}>Back to home</Link>
         </>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './Sentence.css'
 
 interface SentenceProps {
@@ -8,6 +8,9 @@ interface SentenceProps {
 
 export default function Sentence(props: SentenceProps) {
   const [show, setShow] = useState(false)
+
+  useEffect(() => setShow(false), [props.en])
+
   return (
     <div className="Sentence">
       <p className="sentence">{props.en}</p>
