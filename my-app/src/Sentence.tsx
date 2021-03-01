@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Transition } from 'react-transition-group';
 import './Sentence.css'
 
 interface SentenceProps {
@@ -11,12 +12,26 @@ export default function Sentence(props: SentenceProps) {
 
   useEffect(() => setShow(false), [props.en])
 
+  const defaultStyle = {
+    transition: `opacity 300ms ease-in-out`,
+    opacity: 0,
+  }
+
+  const transitionStyles = {
+    entering: { opacity: 1 },
+    entered:  { opacity: 1 },
+    exiting:  { opacity: 0 },
+    exited:  { opacity: 0 },
+  };
+
   return (
     <div className="Sentence">
       <p className="sentence">{props.en}</p>
       <div className="ja">
         <button className="btn btn-secondary" onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'} Japanese</button>
-        {show && <p className="sentence">{props.ja}</p>}
+        <Transition in={show} timeout={300}>
+          {state => <p className="sentence" style={{...defaultStyle, ...transitionStyles}}>{props.ja}</p>}
+        </Transition>
       </div>
     </div>
   )
