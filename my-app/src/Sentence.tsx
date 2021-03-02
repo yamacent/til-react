@@ -30,7 +30,9 @@ export default function Sentence(props: SentenceProps) {
       <div className="ja">
         <button className="btn btn-secondary" onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'} Japanese</button>
         <Transition in={show} timeout={300}>
-          {state => <p className="sentence" style={{...defaultStyle, ...transitionStyles}}>{props.ja}</p>}
+          {(state: keyof typeof transitionStyles) => (
+            <p className="sentence" style={{...defaultStyle, ...transitionStyles[state]}}>{props.ja}</p>
+          )}
         </Transition>
       </div>
     </div>
