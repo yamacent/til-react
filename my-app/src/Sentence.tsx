@@ -13,7 +13,7 @@ export default function Sentence(props: SentenceProps) {
   useEffect(() => setShow(false), [props.en])
 
   const defaultStyle = {
-    transition: `opacity 300ms ease-in-out`,
+    transition: `opacity 200ms ease-out`,
     opacity: 0,
   }
 
@@ -29,7 +29,7 @@ export default function Sentence(props: SentenceProps) {
       <p className="sentence">{props.en}</p>
       <div className="ja">
         <button className="btn btn-secondary" onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'} Japanese</button>
-        <Transition in={show} timeout={300}>
+        <Transition in={show} timeout={200} key={props.en}>
           {(state: keyof typeof transitionStyles) => (
             <p className="sentence" style={{...defaultStyle, ...transitionStyles[state]}}>{props.ja}</p>
           )}
